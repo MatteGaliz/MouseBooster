@@ -48,10 +48,12 @@ class MyFrame extends JFrame {
         targetPanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                // controllare se e' stato colpito qualcosa
-                // uso e.getX & e.getY perche' e.getPositionOnScreen ritorna la posizione assoluta sullo schermo del puntatore
-                // mostrare una nuova forma con cambio forma e colore
-                // TODO: IMPORTANTE, SE L OGGETTO VIENE COLPITO SE NE CREA UN ALTRO E SI RESETTA IL CLOCK DEL TIMER INTERNO
+                /*
+                 controllare se e' stato colpito qualcosa
+                 uso e.getX & e.getY perche' e.getPositionOnScreen ritorna la posizione assoluta sullo schermo del puntatore
+                 mostrare una nuova forma con cambio forma e colore
+                 TODO: IMPORTANTE, SE L OGGETTO VIENE COLPITO SE NE CREA UN ALTRO E SI RESETTA IL CLOCK DEL TIMER INTERNO
+                */
             }
         });
         btnClose.addActionListener((ActionEvent e) -> {
