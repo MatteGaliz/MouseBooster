@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f407596-ad44-461b-afac-fcc1c4b01953" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseBooster/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseBooster/MyFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +59,29 @@
       <option name="presentableId" value="Default" />
       <updated>1582508729463</updated>
     </task>
+    <task id="LOCAL-00001" summary="minor fixes">
+      <created>1585356405569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585356405569</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585352629403">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585352629403" />
-    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1585356383227">
+    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1585356404775">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585356383227" />
+    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585356404775" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1585353781603">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -96,6 +106,10 @@
     </state>
     <state width="1877" height="156" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585355475094" />
     <state width="1877" height="156" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584562204239" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585356408547">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585356408547" />
     <state x="656" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1582541642084">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
