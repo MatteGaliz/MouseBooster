@@ -9,15 +9,19 @@ public class TargetPanel extends JPanel {
     private Point center;
     private int size;
     private Color color;
-    private String shape;
 
-    public TargetPanel(Point center, int size, Color color, String shape) {
+    public TargetPanel(Point center, int size, Color color) {
         super();
         this.center = center;
         this.size = size;
         this.color = color;
-        this.shape = shape.toUpperCase();
         setBackground(new Color(26, 26, 26));
+    }
+
+    public TargetPanel(){
+        super();
+        this.center = new Point(0,0);
+        setBackground(new Color(26,26,26));
     }
 
     @Override
@@ -26,31 +30,14 @@ public class TargetPanel extends JPanel {
         int xf = (int) center.getX();
         int yf = (int) center.getY();
         g.setColor(color);
-        switch (shape) {
-            case "SQUARE":
-                g.fillRect(xf, yf, size, size);
-                g.setColor(Color.BLACK);
-                g.drawRect(xf, yf, size, size);
-                break;
-            case "CIRCLE":
-                g.fillOval(xf, yf, size, size);
-                g.setColor(Color.BLACK);
-                g.drawOval(xf, yf, size, size);
-                break;
-        }
+        g.fillOval(xf, yf, size, size);
+        g.setColor(Color.BLACK);
+        g.drawOval(xf, yf, size, size);
         repaint();
     }
 
     public void move(Point newCenter) {
         this.center = newCenter;
-    }
-
-    public String getShape() {
-        return shape;
-    }
-
-    public void setShape(String shape) {
-        this.shape = shape.toUpperCase();
     }
 
     public int getTargetSize() {
@@ -77,21 +64,13 @@ public class TargetPanel extends JPanel {
         this.center = center;
     }
 
-    public boolean isPuntoInterno(Point p) {
+    public boolean checkIfClicked(Point p) {
+        // size is divided by 2 because the algorithm checks the distance from the center of the circle
         int range = size / 2;
-        Point centroReale = new Point((int) center.getX() + range, (int) center.getY() + range);
-        // calcolo se la distanza tra punto cliccato e centro del cerchio e' minore o uguale alla variabile dimensione
-        if (shape.equals("CIRCLE")) {
-            int distance = (int) Math.sqrt(Math.pow(p.getX() - centroReale.getX(), 2) + Math.pow(p.getY() - centroReale.getY(), 2));
-            if (distance <= range)
-                return true;
-            return false;
-        } else {
-            // se la distanza tra il valore assoluto dei due punti sull asse x && il valore assoluto dei due punti sull asse y e' < della variabile dimensione allora e' valido
-            if ((Math.abs(centroReale.getX() - p.getX()) < range) && (Math.abs(centroReale.getY() - p.getY()) < range))
-                return true;
-            return false;
-        }
+        Point trueCenter = new Point((int) center.getX() + range, (int) center.getY() + range);
+        // calculating if the distance between the clicked point and the center is more or less than the radius
+        int distance = (int) Math.sqrt(Math.pow(p.getX() - trueCenter.getX(), 2) + Math.pow(p.getY() - trueCenter.getY(), 2));
+        return distance <= range;
     }
 
 }

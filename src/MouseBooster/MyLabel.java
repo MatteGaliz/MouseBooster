@@ -7,30 +7,30 @@ import javax.swing.JLabel;
 
 public class MyLabel extends JLabel {
 
-    private int value;
+    private double value;
 
-    public MyLabel(int value, Color color) {
+    public MyLabel(double value, Color color) {
         this.value = value;
         this.setForeground(color);
         this.setFont(new Font("Calibri", Font.BOLD, 20));
         showLabel();
     }
 
-    public void setValue(int valore) {
-        this.value = valore;
+    public void setValue(double value) {
+        this.value = value;
         showLabel();
     }
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void increment(int value) {
+    public void increment(double value) {
         this.value++;
         showLabel();
     }
 
-    public void decrement(int value) {
+    public void decrement(double value) {
         this.value--;
         showLabel();
     }

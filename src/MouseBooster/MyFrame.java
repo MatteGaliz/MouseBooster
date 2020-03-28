@@ -19,9 +19,12 @@ class MyFrame extends JFrame {
     private JPanel pNordTop;
     private JPanel pNordBottom;
 
-    private ButtonGroup buttonGroup;
+    private ButtonGroup radioMode;
     private JRadioButton radioEasy;
     private JRadioButton radioHard;
+    private ButtonGroup radioSpeed;
+    private JRadioButton radioSlow;
+    private JRadioButton radioFast;
 
     private MyLabel lblHit;
     private MyLabel lblMiss;
@@ -32,6 +35,7 @@ class MyFrame extends JFrame {
     private JButton btnStart;
 
     private Color darkBG = new Color(26, 26, 26);
+    private int targetCounter;
 
     Timer myTimer;
     Random rand = new Random();
@@ -49,11 +53,17 @@ class MyFrame extends JFrame {
             @Override
             public void mousePressed(MouseEvent e) {
                 /*
-                 controllare se e' stato colpito qualcosa
-                 uso e.getX & e.getY perche' e.getPositionOnScreen ritorna la posizione assoluta sullo schermo del puntatore
-                 mostrare una nuova forma con cambio forma e colore
                  TODO: IMPORTANTE, SE L OGGETTO VIENE COLPITO SE NE CREA UN ALTRO E SI RESETTA IL CLOCK DEL TIMER INTERNO
                 */
+                // verifica che il cerchio sia colpito
+                Point clickedPoint = new Point(e.getX(), e.getY());
+                System.out.println(clickedPoint);
+                System.out.println(targetPanel.checkIfClicked(clickedPoint));
+                if (targetPanel.checkIfClicked(clickedPoint)) {
+                    lblHit.increment(1);
+                } else {
+                    lblMiss.increment(1);
+                }
             }
         });
         btnClose.addActionListener((ActionEvent e) -> {
@@ -65,19 +75,26 @@ class MyFrame extends JFrame {
             lblAccuracy.setValue(0);
         });
         btnStart.addActionListener((ActionEvent e) -> {
-            // start targets generation
-            myTimer.restart();
+            if (myTimer.isRunning()) {
+                myTimer.stop();
+                btnStart.setText("Riprendi");
+            } else {
+                myTimer.restart();
+                btnStart.setText("Pausa");
+            }
         });
-        myTimer = new Timer(1000, new TimerAction());
+        myTimer = new Timer(500, new TimerAction());
     }
 
     private void preparePanels() {
-        Random rand = new Random();
         pNordTop = new JPanel();
         pNordTop.setBackground(darkBG);
         pNordTop.add(new JLabel("MODE: ")).setForeground(Color.WHITE);
         pNordTop.add(radioEasy);
         pNordTop.add(radioHard);
+        pNordTop.add(new JLabel("  SPEED: ")).setForeground(Color.WHITE);
+        pNordTop.add(radioSlow);
+        pNordTop.add(radioFast);
 
         pNordBottom = new JPanel();
         pNordBottom.setBackground(darkBG);
@@ -93,9 +110,7 @@ class MyFrame extends JFrame {
         pNord.add(pNordBottom);
 
         // punto centrale
-        int xf = rand.nextInt(100);
-        int yf = rand.nextInt(100);
-        targetPanel = new TargetPanel(new Point(xf, yf), 120, getRandomColor(), "cricle");
+        targetPanel = new TargetPanel();
 
         pSouth = new JPanel();
         pSouth.setBackground(darkBG);
@@ -112,23 +127,35 @@ class MyFrame extends JFrame {
     private void prepareControls() {
 
         /* RadioButton */
-        buttonGroup = new ButtonGroup();
+        /* Difficulty */
+        radioMode = new ButtonGroup();
         radioEasy = new JRadioButton("Easy");
         radioEasy.setBackground(darkBG);
         radioEasy.setForeground(Color.WHITE);
-        buttonGroup.add(radioEasy);
+        radioEasy.setSelected(true);
+        radioMode.add(radioEasy);
         radioHard = new JRadioButton("Hard");
         radioHard.setBackground(darkBG);
         radioHard.setForeground(Color.WHITE);
-        buttonGroup.add(radioHard);
+        radioMode.add(radioHard);
+        /* Speed */
+        radioSpeed = new ButtonGroup();
+        radioSlow = new JRadioButton("Slow");
+        radioSlow.setBackground(darkBG);
+        radioSlow.setForeground(Color.WHITE);
+        radioSlow.setSelected(true);
+        radioSpeed.add(radioSlow);
+        radioFast = new JRadioButton("Fast");
+        radioFast.setBackground(darkBG);
+        radioFast.setForeground(Color.WHITE);
+        radioSpeed.add(radioFast);
 
         /* Other buttons */
         btnReset = new JButton("Reset");
         btnClose = new JButton("Close");
         btnStart = new JButton("Start");
-        /*
-         * custom hit/miss labels
-         */
+
+        /* custom hit/miss labels */
         lblHit = new MyLabel(0, Color.GREEN);
         lblMiss = new MyLabel(0, Color.RED);
         lblAccuracy = new MyLabel(0, Color.MAGENTA);
@@ -138,12 +165,20 @@ class MyFrame extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            targetPanel.setShape("CIRCLE");
-            targetPanel.changeColor(getRandomColor());
-            targetPanel.move(getRandomCenter());
-            targetPanel.setTargetSize(120);
+            if (radioEasy.isSelected()) {
+                targetPanel.changeColor(Color.RED);
+                targetPanel.move(getRandomCenter());
+                targetPanel.setTargetSize(120);
+            } else {
+                targetPanel.changeColor(getRandomColor());
+                targetPanel.move(getRandomCenter());
+                targetPanel.setTargetSize(60);
+            }
+            targetCounter++;
+            lblAccuracy.setValue((lblHit.getValue() / targetCounter) * 100);
             targetPanel.repaint();
-        }}
+        }
+    }
 
     private Color getRandomColor() {
         Random gen = new Random();
@@ -156,9 +191,15 @@ class MyFrame extends JFrame {
 
     private Point getRandomCenter() {
         Random gen = new Random();
-        int x = gen.nextInt(targetPanel.getWidth());
-        int y = gen.nextInt(targetPanel.getHeight());
-        return new Point(x, y);
+        if (radioEasy.isSelected()) {
+            int x = gen.nextInt(targetPanel.getWidth() - 120);
+            int y = gen.nextInt(targetPanel.getHeight() - 120);
+            return new Point(x, y);
+        } else {
+            int x = gen.nextInt(targetPanel.getWidth() - 60);
+            int y = gen.nextInt(targetPanel.getHeight() - 60);
+            return new Point(x, y);
+        }
     }
 }
 
