@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f407596-ad44-461b-afac-fcc1c4b01953" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseBooster/AimBooster/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseBooster/AimBooster/MyFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseBooster/AimBooster/MyFrame$TimerAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseBooster/AimBooster/MyFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseBooster/AimBooster/MyLabel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseBooster/AimBooster/TargetPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseBooster/META-INF/MouseBooster.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseBooster/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseBooster/MyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MouseBooster/MyLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseBooster/MyLabel.java" afterDir="false" />
-    </list>
+    <list default="true" id="8f407596-ad44-461b-afac-fcc1c4b01953" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +12,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YEXSnDkJSb3baSf16q15bTRZUe" />
   <component name="ProjectViewState">
@@ -85,46 +75,54 @@
       <option name="project" value="LOCAL" />
       <updated>1585430683144</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed accuracy display">
+      <created>1587860529749</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587860529749</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="minor fixes" />
     <MESSAGE value="added difficulty and speed, still in development" />
-    <option name="LAST_COMMIT_MESSAGE" value="added difficulty and speed, still in development" />
+    <MESSAGE value="fixed accuracy display" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed accuracy display" />
   </component>
   <component name="WindowStateProjectService">
     <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585352629403">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="442" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585352629403" />
-    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1585430682231">
+    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1587860528876">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585430682231" />
+    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860528876" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1585353781603">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585353781603" />
-    <state width="1877" height="148" key="GridCell.Tab.0.bottom" timestamp="1587860005422">
+    <state width="1877" height="148" key="GridCell.Tab.0.bottom" timestamp="1587860530667">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860005422" />
+    <state width="1877" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860530667" />
     <state width="1877" height="156" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584562204239" />
-    <state width="1877" height="148" key="GridCell.Tab.0.center" timestamp="1587860005422">
+    <state width="1877" height="148" key="GridCell.Tab.0.center" timestamp="1587860530667">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="148" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860005422" />
+    <state width="1877" height="148" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860530667" />
     <state width="1877" height="156" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584562204239" />
-    <state width="1877" height="148" key="GridCell.Tab.0.left" timestamp="1587860005422">
+    <state width="1877" height="148" key="GridCell.Tab.0.left" timestamp="1587860530667">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="148" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860005422" />
+    <state width="1877" height="148" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860530667" />
     <state width="1877" height="156" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584562204239" />
-    <state width="1877" height="148" key="GridCell.Tab.0.right" timestamp="1587860005422">
+    <state width="1877" height="148" key="GridCell.Tab.0.right" timestamp="1587860530667">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="148" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860005422" />
+    <state width="1877" height="148" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860530667" />
     <state width="1877" height="156" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1584562204239" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585430686240">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -134,10 +132,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1582541642084" />
-    <state x="769" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585356347655">
+    <state x="769" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587860565839">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="769" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1585356347655" />
+    <state x="769" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1587860565839" />
     <state x="2262" y="145" key="new project wizard" timestamp="1584562204134">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
