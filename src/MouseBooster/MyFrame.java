@@ -23,9 +23,6 @@ class MyFrame extends JFrame {
     private ButtonGroup radioMode;
     private JRadioButton radioEasy;
     private JRadioButton radioHard;
-    private ButtonGroup radioSpeed;
-    private JRadioButton radioSlow;
-    private JRadioButton radioFast;
 
     private MyLabel lblHit;
     private MyLabel lblMiss;
@@ -93,9 +90,6 @@ class MyFrame extends JFrame {
         pNordTop.add(new JLabel("MODE: ")).setForeground(Color.WHITE);
         pNordTop.add(radioEasy);
         pNordTop.add(radioHard);
-        pNordTop.add(new JLabel("  SPEED: ")).setForeground(Color.WHITE);
-        pNordTop.add(radioSlow);
-        pNordTop.add(radioFast);
 
         pNordBottom = new JPanel();
         pNordBottom.setBackground(darkBG);
@@ -139,17 +133,6 @@ class MyFrame extends JFrame {
         radioHard.setBackground(darkBG);
         radioHard.setForeground(Color.WHITE);
         radioMode.add(radioHard);
-        /* Speed */
-        radioSpeed = new ButtonGroup();
-        radioSlow = new JRadioButton("Slow");
-        radioSlow.setBackground(darkBG);
-        radioSlow.setForeground(Color.WHITE);
-        radioSlow.setSelected(true);
-        radioSpeed.add(radioSlow);
-        radioFast = new JRadioButton("Fast");
-        radioFast.setBackground(darkBG);
-        radioFast.setForeground(Color.WHITE);
-        radioSpeed.add(radioFast);
 
         /* Other buttons */
         btnReset = new JButton("Reset");
