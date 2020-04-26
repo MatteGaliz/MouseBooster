@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 import javax.swing.*;
 
@@ -39,6 +40,7 @@ class MyFrame extends JFrame {
 
     Timer myTimer;
     Random rand = new Random();
+    DecimalFormat dcFormat = new DecimalFormat("#.00");
 
     public MyFrame(String title) {
         super(title);
@@ -66,21 +68,20 @@ class MyFrame extends JFrame {
                 }
             }
         });
-        btnClose.addActionListener((ActionEvent e) -> {
-            System.exit(1);
-        });
+        btnClose.addActionListener((ActionEvent e) -> System.exit(1));
         btnReset.addActionListener((ActionEvent e) -> {
             lblHit.setValue(0);
             lblMiss.setValue(0);
             lblAccuracy.setValue(0);
+            btnStart.setText("Start");
         });
         btnStart.addActionListener((ActionEvent e) -> {
             if (myTimer.isRunning()) {
                 myTimer.stop();
-                btnStart.setText("Riprendi");
+                btnStart.setText("Resume");
             } else {
                 myTimer.restart();
-                btnStart.setText("Pausa");
+                btnStart.setText("Pause");
             }
         });
         myTimer = new Timer(500, new TimerAction());
@@ -175,7 +176,8 @@ class MyFrame extends JFrame {
                 targetPanel.setTargetSize(60);
             }
             targetCounter++;
-            lblAccuracy.setValue((lblHit.getValue() / targetCounter) * 100);
+            String s = dcFormat.format((lblHit.getValue() / targetCounter) * 100);
+            lblAccuracy.setValue(new Double(s));
             targetPanel.repaint();
         }
     }

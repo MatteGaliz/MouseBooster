@@ -3,11 +3,13 @@ package MouseBooster;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.text.DecimalFormat;
 import javax.swing.JLabel;
 
 public class MyLabel extends JLabel {
 
     private double value;
+    DecimalFormat numberFormat = new DecimalFormat("#.00");
 
     public MyLabel(double value, Color color) {
         this.value = value;
